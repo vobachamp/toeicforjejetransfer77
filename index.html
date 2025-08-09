@@ -368,12 +368,12 @@
         </div>
 
         <div class="navigation">
-            <button class="nav-btn active" onclick="showSection('rc5', this)">RC Part 5</button>
-            <button class="nav-btn" onclick="showSection('rc6', this)">RC Part 6</button>
-            <button class="nav-btn" onclick="showSection('rc7', this)">RC Part 7</button>
-            <button class="nav-btn" onclick="showSection('lc', this)">LC 전략</button>
-            <button class="nav-btn" onclick="showSection('vocab', this)">필수 어휘</button>
-            <button class="nav-btn" onclick="window.open('https://jeje2025.github.io/toeicforjejetransfer6/', '_blank')">Test 6</button>
+            <button class="nav-btn active" data-section="rc5">RC Part 5</button>
+            <button class="nav-btn" data-section="rc6">RC Part 6</button>
+            <button class="nav-btn" data-section="rc7">RC Part 7</button>
+            <button class="nav-btn" data-section="lc">LC 전략</button>
+            <button class="nav-btn" data-section="vocab">필수 어휘</button>
+            <button class="nav-btn" id="test6-btn">Test 6</button>
         </div>
 
         <div class="content">
@@ -399,12 +399,6 @@
                                 <li><strong>주어 자리</strong> (문장 맨 앞)</li>
                             </ul>
                         </div>
-                        
-                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin-top: 10px;">
-                            <h5 style="color: #495057;">기출 예문 (121번)</h5>
-                            <p style="font-style: italic; margin: 10px 0;">Garcia's latest <span class="highlight">______</span> has resulted in profits increasing...</p>
-                            <p><strong>분석:</strong> 소유격 <code>Garcia's</code>와 형용사 <code>latest</code> 뒤에는 <strong>명사</strong>가 와야 합니다. 따라서 명사형이 정답!</p>
-                        </div>
                     </div>
 
                     <div class="pattern-box">
@@ -414,17 +408,11 @@
                         <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
                             <h5 style="color: #667eea; margin-bottom: 10px;">핵심 패턴</h5>
                             <ul class="example-list">
-                                <li><strong>be동사 + <span class="highlight">형용사</span></strong> (2형식 주격 보어)</li>
-                                <li><strong>(관사) + <span class="highlight">형용사</span> + 명사</strong> (명사 수식)</li>
-                                <li><strong>5형식 동사 + 목적어 + <span class="highlight">형용사</span></strong><br>
-                                예: <code>find, make, keep</code> + 목적어 + 형용사 (목적격 보어)</li>
+                                <li><strong>be동사 뒤</strong>, 2형식 동사 뒤 (주격 보어)</li>
+                                <li><strong>명사 앞</strong> (명사 수식)</li>
+                                <li><strong>5형식 동사의 목적격 보어</strong><br>
+                                <code>find, make, keep</code> + 목적어 + <span class="highlight">형용사</span></li>
                             </ul>
-                        </div>
-                        
-                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin-top: 10px;">
-                            <h5 style="color: #495057;">기출 예문 (103번)</h5>
-                            <p style="font-style: italic; margin: 10px 0;">The presentation was <span class="highlight">______</span> and informative.</p>
-                            <p><strong>분석:</strong> <code>be동사(was)</code> 뒤에 <code>and</code>로 연결된 형용사 <code>informative</code>와 병렬 구조를 이루므로 <strong>형용사</strong>가 정답!</p>
                         </div>
                     </div>
 
@@ -445,7 +433,112 @@
                 </div>
 
                 <div class="card">
-                    <h3>🥈 2위: 어휘 문제 <span class="question-nums">11문제 출제</span></h3>
+                    <h3>🥈 2위: 동사 형태 문제 <span class="question-nums">3문제 출제</span></h3>
+                    <p style="margin-bottom: 20px;">주어와의 관계(능동/수동), 시제, 그리고 문장 내에서 동사가 어떤 형태로 변형되어야 하는지를 묻습니다.</p>
+                    
+                    <div class="pattern-box">
+                        <h4>📌 to부정사 활용 <span class="question-nums">Q.105, 111</span></h4>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #667eea; margin-bottom: 10px;">목적을 나타내는 to부정사</h5>
+                            <p><strong>~하기 위해서</strong>라는 의미로 문장 뒤에 추가 설명 (105번)</p>
+                        </div>
+                        
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                            <h5 style="color: #495057;">5형식 동사 + 목적어 + to부정사</h5>
+                            <p>특정 동사들은 목적어 뒤에 to부정사를 목적격 보어로 취합니다.</p>
+                            <ul class="example-list" style="margin-top: 10px;">
+                                <li><code>enable + O + to V</code> - O가 V하도록 가능하게 하다</li>
+                                <li><code>allow + O + to V</code> - O가 V하도록 허락하다</li>
+                                <li><code>require + O + to V</code> - O가 V하도록 요구하다</li>
+                                <li><code>advise + O + to V</code> - O에게 V하라고 조언하다</li>
+                                <li><code>ask + O + to V</code> - O에게 V하라고 요청하다</li>
+                                <li><code>cause + O + to V</code> - O가 V하도록 야기하다</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pattern-box">
+                        <h4>📌 명령문 <span class="question-nums">Q.113</span></h4>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #667eea; margin-bottom: 10px;">핵심 규칙</h5>
+                            <p>주어 없이 <strong>동사원형</strong>으로 문장이 시작되면 명령문입니다!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>🥉 3위: 접속사/전치사/접속부사 <span class="question-nums">6문제 출제</span></h3>
+                    <p style="margin-bottom: 20px;">문장과 문장(절), 또는 단어와 단어(구)를 연결하는 기능을 정확히 이해해야 합니다.</p>
+                    
+                    <div class="pattern-box">
+                        <h4>📌 접속사 vs 전치사 구분법 <span class="question-nums">Q.115</span></h4>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #667eea; margin-bottom: 10px;">황금 공식</h5>
+                            <p><strong>접속사</strong> + <span class="highlight">주어 + 동사 (절)</span><br>
+                            <strong>전치사</strong> + <span class="highlight">명사 (구)</span></p>
+                        </div>
+                        
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                            <h5 style="color: #495057;">자주 헷갈리는 쌍</h5>
+                            <ul class="example-list">
+                                <li><code>because</code> (접속사) vs <code>because of</code> (전치사)</li>
+                                <li><code>although</code> (접속사) vs <code>despite</code> (전치사)</li>
+                                <li><code>while</code> (접속사) vs <code>during</code> (전치사)</li>
+                                <li><code>if</code> (접속사) vs <code>due to</code> (전치사)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pattern-box">
+                        <h4>📌 의미별 주요 표현 <span class="question-nums">Q.106, 122, 126</span></h4>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #667eea; margin-bottom: 10px;">시간 관련</h5>
+                            <ul class="example-list">
+                                <li><code>until</code> - 행위/상태의 <strong>지속</strong> (~까지 계속)</li>
+                                <li><code>by</code> - 행위의 <strong>완료/마감</strong> (~까지는)</li>
+                                <li><code>within</code> - 특정 기간 <strong>이내에</strong></li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                            <h5 style="color: #495057;">조건/양보</h5>
+                            <ul class="example-list">
+                                <li><code>as long as</code> - ~하는 한 (조건)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pattern-box">
+                        <h4>📌 상관접속사 <span class="question-nums">Q.102</span></h4>
+                        <p>짝을 이루는 표현은 통째로 암기해야 합니다!</p>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <ul class="example-list">
+                                <li><code>both A and B</code> - A와 B 둘 다</li>
+                                <li><code>either A or B</code> - A 또는 B 둘 중 하나</li>
+                                <li><code>neither A nor B</code> - A도 B도 아닌</li>
+                                <li><code>not only A but also B</code> - A뿐만 아니라 B도</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pattern-box">
+                        <h4>📌 접속부사 <span class="question-nums">Q.109</span></h4>
+                        <p>문장과 문장의 논리적 관계를 나타내지만, 접속사처럼 절을 연결하지는 못합니다.</p>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <p>문장 중간에 올 경우 보통 콤마(,)와 함께 쓰입니다.</p>
+                            <p style="margin-top: 10px;">예: <code>however</code>, <code>therefore</code>, <code>rarely</code></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>🏅 4위: 어휘 문제 <span class="question-nums">11문제 출제</span></h3>
                     <p style="margin-bottom: 20px;">문법적으로는 모두 가능하지만, 문맥상 가장 자연스러운 의미의 단어를 고르는 유형입니다.</p>
                     
                     <div class="pattern-box">
@@ -474,103 +567,6 @@
                 </div>
 
                 <div class="card">
-                    <h3>🥉 3위: 접속사/전치사/접속부사 <span class="question-nums">6문제 출제</span></h3>
-                    <p style="margin-bottom: 20px;">문장과 문장(절), 또는 단어와 단어(구)를 연결하는 기능을 정확히 이해해야 합니다.</p>
-                    
-                    <div class="pattern-box">
-                        <h4>📌 접속사 vs 전치사 구분법 <span class="question-nums">Q.115</span></h4>
-                        
-                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                            <h5 style="color: #667eea; margin-bottom: 10px;">황금 공식</h5>
-                            <p><strong>접속사</strong> + <span class="highlight">주어 + 동사 (절)</span><br>
-                            <strong>전치사</strong> + <span class="highlight">명사 (구)</span></p>
-                        </div>
-                        
-                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
-                            <h5 style="color: #495057;">자주 헷갈리는 쌍</h5>
-                            <ul class="example-list">
-                                <li><code>because</code> (접속사) vs <code>because of</code> (전치사)</li>
-                                <li><code>although</code> (접속사) vs <code>despite</code> (전치사)</li>
-                                <li><code>while</code> (접속사) vs <code>during</code> (전치사)</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="pattern-box">
-                        <h4>📌 의미별 주요 표현 <span class="question-nums">Q.106, 122, 126</span></h4>
-                        
-                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                            <h5 style="color: #667eea; margin-bottom: 10px;">시간 관련</h5>
-                            <ul class="example-list">
-                                <li><code>until</code> - 행위/상태의 <strong>지속</strong> (~까지 계속)</li>
-                                <li><code>by</code> - 행위의 <strong>완료/마감</strong> (~까지는)</li>
-                                <li><code>within</code> - 특정 기간 <strong>이내에</strong></li>
-                            </ul>
-                        </div>
-                        
-                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
-                            <h5 style="color: #495057;">조건/양보</h5>
-                            <ul class="example-list">
-                                <li><code>as long as</code> - ~하는 한 (조건)</li>
-                                <li><code>provided that</code> - ~라면 (조건)</li>
-                                <li><code>even though</code> - ~임에도 불구하고 (양보)</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="pattern-box">
-                        <h4>📌 상관접속사 <span class="question-nums">Q.102</span></h4>
-                        <p>짝을 이루는 표현은 통째로 암기해야 합니다!</p>
-                        
-                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                            <ul class="example-list">
-                                <li><code>both A and B</code> - A와 B 둘 다</li>
-                                <li><code>either A or B</code> - A 또는 B 둘 중 하나</li>
-                                <li><code>neither A nor B</code> - A도 B도 아닌</li>
-                                <li><code>not only A but also B</code> - A뿐만 아니라 B도</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h3>🏅 4위: 동사 형태 문제 <span class="question-nums">3문제 출제</span></h3>
-                    <p style="margin-bottom: 20px;">준동사(to부정사, 동명사, 분사)와 명령문의 형태를 정확히 파악해야 합니다.</p>
-                    
-                    <div class="pattern-box">
-                        <h4>📌 to부정사 활용 <span class="question-nums">Q.105, 111</span></h4>
-                        
-                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                            <h5 style="color: #667eea; margin-bottom: 10px;">목적을 나타내는 to부정사</h5>
-                            <p><strong>~하기 위해서</strong>라는 의미로 문장 뒤에 추가 설명</p>
-                            <p style="margin-top: 10px;"><em>예: I went to the store <strong>to buy</strong> some milk.</em></p>
-                        </div>
-                        
-                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
-                            <h5 style="color: #495057;">5형식 동사 + 목적어 + to부정사</h5>
-                            <p>특정 동사들은 목적어 뒤에 to부정사를 목적격 보어로 취합니다.</p>
-                            <ul class="example-list" style="margin-top: 10px;">
-                                <li><code>enable + O + to V</code> - O가 V하도록 가능하게 하다</li>
-                                <li><code>allow + O + to V</code> - O가 V하도록 허락하다</li>
-                                <li><code>require + O + to V</code> - O가 V하도록 요구하다</li>
-                                <li><code>advise + O + to V</code> - O에게 V하라고 조언하다</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="pattern-box">
-                        <h4>📌 명령문 <span class="question-nums">Q.113</span></h4>
-                        
-                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
-                            <h5 style="color: #667eea; margin-bottom: 10px;">핵심 규칙</h5>
-                            <p>주어 없이 <strong>동사원형</strong>으로 문장이 시작되면 명령문입니다!</p>
-                            <p style="margin-top: 10px;"><em>예: <strong>Please ensure</strong> all doors are locked. (O)<br>
-                            Please ensuring... (X)</em></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
                     <h3>🏅 5위: 대명사 문제 <span class="question-nums">2문제 출제</span></h3>
                     <p style="margin-bottom: 20px;">명사를 대신 받는 대명사의 격과 수를 정확히 파악해야 합니다.</p>
                     
@@ -579,7 +575,7 @@
                         
                         <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
                             <h5 style="color: #667eea; margin-bottom: 10px;">수 일치 체크</h5>
-                            <p>앞에 나온 명사의 수(단수/복수)와 일치해야 합니다.</p>
+                            <p>뒤에 오는 명사를 수식하며, 앞에 나온 명사의 수(단수/복수)와 일치해야 합니다.</p>
                             <ul class="example-list" style="margin-top: 10px;">
                                 <li><code>Passengers</code> (복수) → <code>their</code> seats</li>
                                 <li><code>The company</code> (단수) → <code>its</code> policy</li>
@@ -617,6 +613,7 @@
                     
                     <div class="pattern-box" style="margin-top: 20px;">
                         <h4>🔑 정답 찾는 3단계 전략</h4>
+                        <p style="margin-bottom: 15px;">정답인 문장은 <strong>'앞 문장의 내용을 받아서, 뒷 문장의 내용으로 자연스럽게 연결'</strong>하는 다리 역할을 합니다.</p>
                         
                         <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
                             <h5 style="color: #667eea; margin-bottom: 10px;">Step 1: 앞 문장과의 연결</h5>
@@ -639,30 +636,22 @@
                         
                         <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
                             <h5 style="color: #495057;">Q.132 - 제안과 이유 연결</h5>
-                            <p style="margin: 10px 0;">앞 문장: 다른 직책 제안<br>
-                            빈칸: <span class="highlight">______</span><br>
-                            뒷 문장: 첨부 문서 참조 안내</p>
-                            <p><strong>정답 (D):</strong> 제안의 이유를 설명하며, <code>The attached document</code>로 자연스럽게 연결</p>
+                            <p style="margin: 10px 0;">앞선 제안(다른 직책)에 대한 이유를 설명하며, 첨부된 문서(<code>The attached document</code>) 내용으로 연결하는 (D)가 정답입니다.</p>
                         </div>
                         
                         <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
                             <h5 style="color: #495057;">Q.136 - 내용 부연 설명</h5>
-                            <p style="margin: 10px 0;">앞 문장: <code>great deals</code> (좋은 상품) 언급<br>
-                            빈칸: <span class="highlight">______</span><br>
-                            뒷 문장: 구체적인 할인 정보</p>
-                            <p><strong>정답 (A):</strong> 좋은 상품을 얻는 방법을 제시하며 자연스럽게 연결</p>
+                            <p style="margin: 10px 0;">앞 문장의 <code>great deals</code>(좋은 상품)를 부연 설명하며, 좋은 상품을 얻는 방법을 제시하는 (A)가 가장 자연스럽습니다.</p>
                         </div>
                         
                         <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
                             <h5 style="color: #495057;">Q.140 - 추가 정보 제공</h5>
-                            <p style="margin: 10px 0;">도로 통제 공지문에서 '영향받는 지역의 지도를 첨부했으니 참고하라'는 내용이 가장 적절</p>
-                            <p><strong>정답 (C):</strong> 실용적인 정보를 추가로 제공</p>
+                            <p style="margin: 10px 0;">도로 통제 공지에 대해, '영향받는 지역의 지도'를 첨부했으니 참고하라는 (C)가 가장 적절한 흐름입니다.</p>
                         </div>
                         
                         <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
                             <h5 style="color: #495057;">Q.145 - 정보 나열 확장</h5>
-                            <p style="margin: 10px 0;">천문관의 특징을 나열하다가 단기 전시회 정보를 추가</p>
-                            <p><strong>정답 (D):</strong> 기존 정보에 새로운 정보를 더하는 자연스러운 흐름</p>
+                            <p style="margin: 10px 0;">새로운 천문관의 특징을 나열하다가, 단기 전시회도 열릴 것이라는 (D)를 추가하며 정보를 더하는 것이 자연스럽습니다.</p>
                         </div>
                     </div>
                 </div>
@@ -677,9 +666,9 @@
                         <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
                             <h5 style="color: #667eea; margin-bottom: 10px;">문맥별 적절한 명사 선택</h5>
                             <ul class="example-list">
-                                <li><strong>Q.133:</strong> 물류 코디네이터 직책 → <code>application</code> (지원서)</li>
-                                <li><strong>Q.141:</strong> 도로 통제의 영향 → 주변 <code>business</code> (사업체)</li>
-                                <li><strong>Q.143:</strong> 박물관 단지 → 여러 <code>buildings</code> (건물들)</li>
+                                <li><strong>Q.133:</strong> '물류 코디네이터'라는 직책은 <code>application</code>(지원서)과 관련</li>
+                                <li><strong>Q.141:</strong> 도로 통제는 주변 <code>business</code>(사업체)에 영향</li>
+                                <li><strong>Q.143:</strong> 박물관은 여러 <code>buildings</code>(건물)로 구성된 단지의 일부</li>
                             </ul>
                         </div>
                     </div>
@@ -963,3 +952,723 @@
                     • 삼중 지문: 3-4분<br>
                     • NOT 문제는 마지막에!</p>
                 </div>
+            </div>
+
+            <div id="lc" class="section">
+                <h2 class="part-title">LC Part 3 & 4 완전 정복 가이드</h2>
+                <p style="margin-bottom: 20px;">토익 LC는 <strong>'얼마나 잘 예측하고, 들은 내용을 얼마나 빠르게 정답과 연결하는가'</strong>의 싸움입니다. 아래 전략과 이론을 숙지하고 체화한다면 어떤 대화나 담화가 나와도 자신 있게 문제를 풀 수 있습니다.</p>
+
+                <div class="card">
+                    <h3>🎯 모든 LC 문제의 기초: 핵심 이론 및 전략</h3>
+                    
+                    <div class="pattern-box" style="margin-top: 20px;">
+                        <h4>1️⃣ 예측 청취 (Anticipatory Listening)의 힘</h4>
+                        <p style="margin-bottom: 15px;">LC의 성패는 음성이 나오기 전 약 30초를 어떻게 활용하는가에 달려있습니다.</p>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #667eea; margin-bottom: 10px;">전략: 대화(담화)가 시작되기 전에 반드시 세 문제와 선택지를 모두 읽어야 합니다.</h5>
+                            
+                            <ul class="example-list" style="margin-top: 15px;">
+                                <li><strong>키워드 파악:</strong> 질문의 핵심어(Who, Where, What, Why 등)와 선택지의 핵심 명사, 동사에 가볍게 표시하며 읽습니다.</li>
+                                <li><strong>내용 예측:</strong> 세 문제를 종합하여 '아, 이 사람들은 동료이고, 회의실 문제에 대해 이야기하다가, 마지막엔 남자가 무언가를 예약하겠구나' 와 같이 대화의 전체적인 시나리오를 미리 그려봅니다.</li>
+                            </ul>
+                            
+                            <div style="background: #f8f9fa; padding: 10px; border-radius: 8px; margin-top: 15px;">
+                                <p>💡 <strong>효과:</strong> 예측을 하고 들으면, 그냥 듣는 것보다 훨씬 더 관련 정보가 명확하게 들립니다. 허공에 낚싯대를 던지는 것과, 물고기가 있는 곳에 낚싯대를 던지는 것의 차이입니다.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pattern-box">
+                        <h4>2️⃣ Paraphrasing (재표현)에 익숙해져라!</h4>
+                        <p style="margin-bottom: 15px;">토익 LC는 절대 들리는 단어를 그대로 정답 선택지에 사용하지 않습니다. 같은 의미를 가진 다른 표현으로 바꾸는 'Paraphrasing'이 핵심입니다.</p>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #667eea; margin-bottom: 10px;">유형 1: 동의어/유사어 활용</h5>
+                            <ul class="example-list">
+                                <li><code>look at a problem</code> → <code>examine a problem</code> (살펴보다)</li>
+                                <li><code>see a doctor</code> → <code>request an appointment</code> (진찰받다 → 예약을 요청하다) <span class="question-nums">Q.77</span></li>
+                                <li><code>putting together my presentation</code> → <code>Preparing some materials</code> (발표 자료를 만들다) <span class="question-nums">Q.38</span></li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #667eea; margin-bottom: 10px;">유형 2: 구체적 사례 → 포괄적 범주</h5>
+                            <ul class="example-list">
+                                <li><code>a passport or driver's license</code> → <code>Proof of identification</code> (여권/운전면허증 → 신분증명서)</li>
+                                <li><code>our new vegetable chips</code> → <code>some product samples</code> (신제품 야채 칩 → 제품 샘플) <span class="question-nums">Q.32</span></li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #667eea; margin-bottom: 10px;">유형 3: 문장 구조 변형</h5>
+                            <ul class="example-list">
+                                <li><code>I'll update our social media page</code> → <code>Post an update on social media</code> <span class="question-nums">Q.43</span></li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: #fff3cd; padding: 15px; border-radius: 8px; margin-top: 15px;">
+                            <p>🔥 <strong>Tip:</strong> 평소 단어를 외울 때, 뜻만 외우지 말고 유의어를 함께 찾아보는 습관을 들이면 Paraphrasing에 강해집니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>📚 문제 유형별 핵심 공략법 및 실전 분석</h3>
+                    
+                    <div class="pattern-box">
+                        <h4>📍 1. 주제/목적/화자/장소 파악 문제 (Gist Questions)</h4>
+                        <p style="margin-bottom: 15px;">"이 대화는 왜 하는가? 이 사람들은 누구이고, 어디 있는가?"</p>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <p style="color: #667eea; font-weight: bold;">핵심 공략법: 대화(담화)의 초반 2~3 문장에 모든 단서가 있습니다. 특히 첫마디에 집중하세요.</p>
+                        </div>
+                        
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                            <h5 style="color: #495057; margin-bottom: 10px;">실전 분석</h5>
+                            <ul class="example-list">
+                                <li><strong>Q.33 (장소):</strong> <code>aisle</code>(통로) 라는 단어 → <strong>(D) 식료품점</strong></li>
+                                <li><strong>Q.47 (화자):</strong> <code>our entire postal delivery fleet</code> → <strong>(C) 우편 배달 기사</strong></li>
+                                <li><strong>Q.77 (목적):</strong> <code>I'd like to see a doctor today</code> → <strong>(D) 진료 예약하기</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pattern-box">
+                        <h4>📍 2. 세부 정보 파악 문제 (Specific Detail Questions)</h4>
+                        <p style="margin-bottom: 15px;">"남자가/여자가/화자가 무엇을 할 것이라고 했는가?"</p>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <p style="color: #667eea; font-weight: bold;">핵심 공략법: 질문의 키워드를 기억하고, 대화의 흐름에 따라 순서대로 들리는 정보를 캐치해야 합니다.</p>
+                        </div>
+                        
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                            <h5 style="color: #495057; margin-bottom: 10px;">실전 분석</h5>
+                            <ul class="example-list">
+                                <li><strong>Q.34:</strong> <code>bringing in your stuff</code> → <strong>(C) 물품 옮기기</strong></li>
+                                <li><strong>Q.81:</strong> <code>I'll be e-mailing you a contract</code> → <strong>(A) 계약서</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pattern-box">
+                        <h4>📍 3. 의도 파악 및 추론 문제 (Inference & Intention Questions)</h4>
+                        <p style="margin-bottom: 15px;">"화자가 이 말을 왜 했을까? 이 대화 내용으로 보아 사실인 것은?"</p>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <p style="color: #667eea; font-weight: bold;">핵심 공략법: 정답이 직접적으로 들리지 않습니다. 해당 발언의 앞뒤 문맥과 어조를 통해 숨은 의미를 파악해야 합니다.</p>
+                        </div>
+                        
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                            <h5 style="color: #495057; margin-bottom: 10px;">실전 분석</h5>
+                            <ul class="example-list">
+                                <li><strong>Q.60:</strong> 직원 1/3이 원격 참여 → <strong>(B) 일부 직원들이 소외감을 느낄 수 있다</strong></li>
+                                <li><strong>Q.86:</strong> 8시 넘어서 마이크 문제 언급 → <strong>(D) 지연에 대해 사과하기 위해</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pattern-box">
+                        <h4>📍 4. 다음 할 일 파악 문제 (Next Action Questions)</h4>
+                        <p style="margin-bottom: 15px;">"대화가 끝난 후 남자가/여자가/청자가 할 일은?"</p>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <p style="color: #667eea; font-weight: bold;">핵심 공략법: 대화(담화)의 마지막 부분에 집중! I will..., Let's..., Please... 등의 표현 뒤에 정답이 나옵니다.</p>
+                        </div>
+                        
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                            <h5 style="color: #495057; margin-bottom: 10px;">실전 분석</h5>
+                            <ul class="example-list">
+                                <li><strong>Q.55:</strong> <code>Let's see if they offer takeout</code> → <strong>(C) 포장 음식 주문하기</strong></li>
+                                <li><strong>Q.85:</strong> <code>Let's break into groups of three</code> → <strong>(B) 소그룹으로 활동하기</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pattern-box" style="background: #fff3cd;">
+                        <h4>📍 5. 시각 정보 연계 문제 (Graphic-Based Questions)</h4>
+                        <p style="margin-bottom: 15px;">"표/그래프/지도를 보고 질문에 답하시오."</p>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #667eea; margin-bottom: 10px;">3단계 전략</h5>
+                            <ol style="margin-left: 20px;">
+                                <li>음성 시작 전, 시각 자료를 먼저 분석합니다.</li>
+                                <li>대화를 들으며 시각 자료와 연결되는 <strong>결정적인 단어(linking keyword)</strong>를 찾습니다.</li>
+                                <li>찾아낸 단어를 시각 자료에 대입하여 정답을 고릅니다.</li>
+                            </ol>
+                        </div>
+                        
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                            <h5 style="color: #495057; margin-bottom: 10px;">실전 분석</h5>
+                            <ul class="example-list">
+                                <li><strong>Q.66:</strong> Blue Jet 항공 → 표에서 확인 → <strong>(C) 9:07 A.M.</strong></li>
+                                <li><strong>Q.97:</strong> lumber가 oversize → 표에서 Lumber 확인 → <strong>(C) 20 meters</strong></li>
+                                <li><strong>Q.99:</strong> Curtis Avenue에서 멈춤 → 지도상 다음 도로 제외 → <strong>(D) Broad Street</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>🔥 시험에 다시 나올 필수 어휘</h3>
+                    <p style="margin-bottom: 15px;">이번 세트에 등장한, 토익이 사랑하는 빈출 어휘들입니다. 반드시 암기하세요!</p>
+                    
+                    <div class="vocabulary-grid">
+                        <div class="vocab-item">
+                            <strong>be scheduled to V</strong>
+                            ~할 예정이다
+                        </div>
+                        <div class="vocab-item">
+                            <strong>overdue</strong>
+                            연체된
+                        </div>
+                        <div class="vocab-item">
+                            <strong>malfunction</strong>
+                            오작동, 고장
+                        </div>
+                        <div class="vocab-item">
+                            <strong>last-minute change</strong>
+                            막판 변경
+                        </div>
+                        <div class="vocab-item">
+                            <strong>take place</strong>
+                            (행사 등이) 열리다
+                        </div>
+                        <div class="vocab-item">
+                            <strong>be concerned about</strong>
+                            ~에 대해 걱정하다
+                        </div>
+                        <div class="vocab-item">
+                            <strong>remotely</strong>
+                            원격으로
+                        </div>
+                        <div class="vocab-item">
+                            <strong>reimburse</strong>
+                            변제하다, 상환하다
+                        </div>
+                        <div class="vocab-item">
+                            <strong>accommodate</strong>
+                            수용하다, 편의를 봐주다
+                        </div>
+                        <div class="vocab-item">
+                            <strong>venue</strong>
+                            (행사) 장소
+                        </div>
+                        <div class="vocab-item">
+                            <strong>proposal / bid</strong>
+                            제안 / 입찰
+                        </div>
+                        <div class="vocab-item">
+                            <strong>contract</strong>
+                            계약(서)
+                        </div>
+                        <div class="vocab-item">
+                            <strong>itinerary</strong>
+                            여행 일정
+                        </div>
+                        <div class="vocab-item">
+                            <strong>get-together</strong>
+                            모임, 회합
+                        </div>
+                        <div class="vocab-item">
+                            <strong>take inventory</strong>
+                            재고를 조사하다
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tip-box">
+                    <h4>💡 LC 고득점을 위한 최종 팁</h4>
+                    <p>1. <strong>예측 청취:</strong> 음성 시작 전 30초를 활용해 문제와 선택지를 미리 읽고 예측하기<br>
+                    2. <strong>Paraphrasing 훈련:</strong> 동의어와 유사 표현을 평소에 많이 익혀두기<br>
+                    3. <strong>문제 유형별 전략:</strong> 각 유형마다 정답이 나오는 위치와 패턴을 숙지하기<br>
+                    4. <strong>시각 자료 문제:</strong> linking keyword를 찾아 시각 자료와 빠르게 매칭하기<br>
+                    5. <strong>마지막 부분 집중:</strong> Next Action 문제는 대화 마지막 10초에 답이 있다!</p>
+                </div>
+            </div>
+
+            <div id="vocab" class="section">
+                <h2 class="part-title">토익 RC 파트 핵심 어휘 총정리</h2>
+                <p style="margin-bottom: 20px;">Test 7에서 출제된 어휘와 토익 빈출 어휘를 카테고리별로 완벽 정리했습니다. 예문과 함께 암기하면 효과가 2배!</p>
+
+                <div class="card">
+                    <h3>💼 1. 비즈니스 & 업무 (Business & Work)</h3>
+                    
+                    <table class="lc-table">
+                        <thead>
+                            <tr>
+                                <th>어휘</th>
+                                <th>뜻</th>
+                                <th>실전 활용 예시</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>credential</strong></td>
+                                <td>자격, 자격증</td>
+                                <td>impressed with your credentials (당신의 자격에 감명받았습니다)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>executive</strong></td>
+                                <td>임원, 경영진</td>
+                                <td>approach enables executives (임원들을 가능하게 하는 접근법)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>logistics</strong></td>
+                                <td>물류, 유통</td>
+                                <td>logistics coordinator (물류 담당자)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>personnel</strong></td>
+                                <td>(총칭적) 직원, 인사과</td>
+                                <td>for all company personnel (모든 회사 직원을 위해)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>physician</strong></td>
+                                <td>(내과) 의사</td>
+                                <td>a panel of physicians (의사들로 구성된 위원회)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>technician</strong></td>
+                                <td>기술자</td>
+                                <td>our production technicians (저희 생산 기술자들)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>revenue</strong></td>
+                                <td>수익, 세입</td>
+                                <td>increase company revenue (회사 수익을 증대시키다)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>reimburse</strong></td>
+                                <td>변제하다, 상환하다</td>
+                                <td>I should be reimbursed (저는 변제받아야 합니다)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>budget</strong></td>
+                                <td>예산</td>
+                                <td>the budget for artwork (미술품을 위한 예산)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>initiative</strong></td>
+                                <td>계획, 주도권</td>
+                                <td>The wellness initiative (건강 증진 계획)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>inventory</strong></td>
+                                <td>재고</td>
+                                <td>Sending plenty of inventory (많은 재고를 보내는 것)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>itinerary</strong></td>
+                                <td>여행 일정</td>
+                                <td>finalize the itinerary (여행 일정을 확정하다)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>merchandise</strong></td>
+                                <td>상품</td>
+                                <td>seeing some merchandise (일부 상품을 보는 것)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>semiannual</strong></td>
+                                <td>반년마다의</td>
+                                <td>semiannual employee survey (반기 직원 설문조사)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>figure</strong></td>
+                                <td>수치, 인물</td>
+                                <td>quarterly sales figures (분기별 판매 수치)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>headquarters</strong></td>
+                                <td>본사</td>
+                                <td>corporate headquarters (기업 본사)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>chairperson</strong></td>
+                                <td>의장</td>
+                                <td>As chairperson of the committee (위원회의 의장으로서)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>launch</strong></td>
+                                <td>출시하다, 시작하다</td>
+                                <td>launch an office recycling program (사무실 재활용 프로그램을 시작하다)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h3>📋 2. 공식 업무 & 절차 (Official Business & Procedures)</h3>
+                    
+                    <table class="lc-table">
+                        <thead>
+                            <tr>
+                                <th>어휘</th>
+                                <th>뜻</th>
+                                <th>실전 활용 예시</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>accommodate</strong></td>
+                                <td>수용하다, 편의를 맞추다</td>
+                                <td>accommodate special requests (특별 요청에 맞춰주다)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>administer</strong></td>
+                                <td>관리하다, 실시하다</td>
+                                <td>administer the survey form (설문조사 양식을 실시하다)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>approve</strong></td>
+                                <td>승인하다</td>
+                                <td>approve plans (계획을 승인하다)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>authorize</strong></td>
+                                <td>허가하다, 권한을 부여하다</td>
+                                <td>obtain authorization (허가를 받다)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>collaborate</strong></td>
+                                <td>협력하다</td>
+                                <td>collaborate with area artists (지역 예술가들과 협력하다)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>conduct</strong></td>
+                                <td>수행하다, 실시하다</td>
+                                <td>conduct an inspection (검사를 수행하다)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>consultation</strong></td>
+                                <td>상담, 자문</td>
+                                <td>After the consultation (상담 후에)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>incorporate</strong></td>
+                                <td>포함하다, 통합하다</td>
+                                <td>incorporate artwork into a new office (새 사무실에 미술품을 통합하다)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>monitor</strong></td>
+                                <td>감시하다, 감독하다</td>
+                                <td>monitor our collection system (수거 시스템을 감독하다)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>negotiation</strong></td>
+                                <td>협상</td>
+                                <td>be finished with the negotiations (협상을 마치다)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>oversee</strong></td>
+                                <td>감독하다</td>
+                                <td>oversee a project (프로젝트를 감독하다)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>streamline</strong></td>
+                                <td>간소화하다, 능률적으로 만들다</td>
+                                <td>streamline the process (과정을 간소화하다)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>supervise</strong></td>
+                                <td>감독하다</td>
+                                <td>supervise an adult (어른이 감독하다)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>bid</strong></td>
+                                <td>입찰</td>
+                                <td>some bidding proposals (몇몇 입찰 제안서)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>grant</strong></td>
+                                <td>보조금, 승인하다</td>
+                                <td>accepts grant proposals (보조금 제안서를 받다)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h3>📄 3. 서류 & 자격 (Documents & Qualifications)</h3>
+                    
+                    <table class="lc-table">
+                        <thead>
+                            <tr>
+                                <th>어휘</th>
+                                <th>뜻</th>
+                                <th>실전 활용 예시</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>agenda</strong></td>
+                                <td>의제, 안건</td>
+                                <td>review an agenda (의제를 검토하다)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>application</strong></td>
+                                <td>지원(서), 신청(서)</td>
+                                <td>submit your application (지원서를 제출하다)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>contract</strong></td>
+                                <td>계약(서)</td>
+                                <td>sign a contract (계약서에 서명하다)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>proposal</strong></td>
+                                <td>제안(서)</td>
+                                <td>submit a proposal (제안서를 제출하다)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>résumé</strong></td>
+                                <td>이력서</td>
+                                <td>reviewing some résumés (이력서를 검토하다)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>expertise</strong></td>
+                                <td>전문 지식</td>
+                                <td>expertise in hospital improvements (병원 개선에 대한 전문 지식)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>license</strong></td>
+                                <td>자격증, 면허</td>
+                                <td>a valid optician license (유효한 안경사 자격증)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>proof of identification</strong></td>
+                                <td>신분 증명</td>
+                                <td>provide proof of identification (신분 증명서를 제공하다)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h3>⚡ 4. 필수 동사/형용사/부사 (Essential Verbs/Adjectives/Adverbs)</h3>
+                    
+                    <table class="lc-table">
+                        <thead>
+                            <tr>
+                                <th>어휘</th>
+                                <th>뜻</th>
+                                <th>실전 활용 예시</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="background: #e8f4f8;">
+                                <td colspan="3"><strong>동사 (Verbs)</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>anticipate</strong></td>
+                                <td>예상하다, 기대하다</td>
+                                <td>anticipating the latest model (최신 모델을 기대하며)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>ensure</strong></td>
+                                <td>보장하다, 확실하게 하다</td>
+                                <td>ensure that you enjoy your stay (즐거운 숙박을 보장하다)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>expire</strong></td>
+                                <td>만료되다</td>
+                                <td>the coupon will expire (쿠폰이 만료될 것이다)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>feature</strong></td>
+                                <td>~을 특징으로 하다</td>
+                                <td>feature electronic payments (전자 결제를 특징으로 하다)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>hesitate</strong></td>
+                                <td>망설이다, 주저하다</td>
+                                <td>do not hesitate to contact us (망설이지 말고 연락주세요)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>notify</strong></td>
+                                <td>알리다, 통지하다</td>
+                                <td>notify employees of the change (직원들에게 변경 사항을 알리다)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>refrain from</strong></td>
+                                <td>~을 삼가다</td>
+                                <td>refrain from asking questions (질문하는 것을 삼가다)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>waive</strong></td>
+                                <td>포기하다, 면제하다</td>
+                                <td>waive the delivery fee (배송비를 면제하다)</td>
+                            </tr>
+                            <tr style="background: #e8f4f8;">
+                                <td colspan="3"><strong>형용사 (Adjectives)</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>complimentary</strong></td>
+                                <td>무료의</td>
+                                <td>complimentary coffee and tea (무료 커피와 차)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>durable</strong></td>
+                                <td>내구성이 있는</td>
+                                <td>durable materials (내구성이 있는 자재)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>eligible for</strong></td>
+                                <td>~의 자격이 있는</td>
+                                <td>be eligible for a refund (환불받을 자격이 있다)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>extensive</strong></td>
+                                <td>광범위한</td>
+                                <td>extensive changes (광범위한 변경)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>mandatory</strong></td>
+                                <td>의무적인</td>
+                                <td>mandatory training session (의무 교육 세션)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>outdated</strong></td>
+                                <td>구식의, 시대에 뒤떨어진</td>
+                                <td>outdated equipment (구식 장비)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>prominent</strong></td>
+                                <td>저명한, 눈에 띄는</td>
+                                <td>a prominent location (눈에 띄는 위치)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>tentative</strong></td>
+                                <td>잠정적인, 임시의</td>
+                                <td>a tentative schedule (잠정적인 스케줄)</td>
+                            </tr>
+                            <tr style="background: #e8f4f8;">
+                                <td colspan="3"><strong>부사 (Adverbs)</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>consequently</strong></td>
+                                <td>결과적으로</td>
+                                <td>Consequently, we are moving ahead. (결과적으로, 저희는 진행하고 있습니다.)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>dramatically</strong></td>
+                                <td>극적으로</td>
+                                <td>dramatically enhance the growth (성장을 극적으로 향상시키다)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>punctually</strong></td>
+                                <td>시간을 엄수하여</td>
+                                <td>arrive punctually (시간 맞춰 도착하다)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h3>🔑 5. 핵심 구문 및 전치사구 (Key Phrases & Prepositions)</h3>
+                    
+                    <table class="lc-table">
+                        <thead>
+                            <tr>
+                                <th>구문/어구</th>
+                                <th>뜻</th>
+                                <th>실전 활용 예시</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>in recognition of</strong></td>
+                                <td>~을 인정하여, ~의 공로로</td>
+                                <td>in recognition of its workplace environment (직장 환경의 공로를 인정하여)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>in compliance with</strong></td>
+                                <td>~을 준수하여</td>
+                                <td>in compliance with regulations (규정을 준수하여)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>prior to</strong></td>
+                                <td>~ 이전에</td>
+                                <td>24 hours prior to arrival (도착 24시간 전에)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>as long as</strong></td>
+                                <td>~하는 한</td>
+                                <td>as long as there is demand (수요가 있는 한)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>in addition to</strong></td>
+                                <td>~에 더하여, ~뿐만 아니라</td>
+                                <td>in addition to the new museum (새 박물관에 더하여)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>be subject to</strong></td>
+                                <td>~의 대상이다</td>
+                                <td>be subject to an additional charge (추가 요금의 대상이 되다)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>by far</strong></td>
+                                <td>단연코, 훨씬</td>
+                                <td>by far, the best (단연코 최고)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>on behalf of</strong></td>
+                                <td>~을 대신하여</td>
+                                <td>on behalf of the entire team (전체 팀을 대신하여)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="tip-box">
+                    <h4>💡 어휘 학습 전략</h4>
+                    <p>1. <strong>예문과 함께 암기:</strong> 단독 단어가 아닌 실제 문장에서 어떻게 쓰이는지 익히기<br>
+                    2. <strong>연어(Collocation) 단위 학습:</strong> 함께 자주 쓰이는 단어 조합을 통째로 암기<br>
+                    3. <strong>카테고리별 정리:</strong> 비즈니스, 공식 업무, 서류 등 주제별로 묶어서 학습<br>
+                    4. <strong>동의어/반의어 함께 공부:</strong> Paraphrasing 문제에 대비하여 유사 표현 익히기<br>
+                    5. <strong>매일 10개씩 반복:</strong> 한 번에 많이 외우려 하지 말고 꾸준히 반복하기</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 네비게이션 버튼 클릭 이벤트
+        document.querySelectorAll('.nav-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Test 6 버튼 처리
+                if (this.id === 'test6-btn') {
+                    window.open('https://jeje2025.github.io/toeicforjejetransfer6/', '_blank');
+                    return;
+                }
+                
+                // 섹션 전환
+                const sectionId = this.dataset.section;
+                if (sectionId) {
+                    showSection(sectionId);
+                    
+                    // 활성 버튼 스타일 변경
+                    document.querySelectorAll('.nav-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                }
+            });
+        });
+
+        // 섹션 표시 함수
+        function showSection(sectionId) {
+            // 모든 섹션 숨기기
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // 선택된 섹션 표시
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
