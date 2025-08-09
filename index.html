@@ -316,6 +316,37 @@
             margin-left: 10px;
         }
 
+        .lc-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .lc-table th {
+            background: #667eea;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .lc-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e9ecef;
+            font-size: 13px;
+        }
+
+        .lc-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .lc-table tr:hover {
+            background: #f8f9fa;
+        }
+
         @media (max-width: 480px) {
             .header h1 {
                 font-size: 20px;
@@ -342,7 +373,7 @@
             <button class="nav-btn" onclick="showSection('rc7')">RC Part 7</button>
             <button class="nav-btn" onclick="showSection('lc')">LC 전략</button>
             <button class="nav-btn" onclick="showSection('vocab')">필수 어휘</button>
-            <button class="nav-btn" onclick="window.open('https://jeje2025.github.io/toeicforjejetransfer/toeic-study-guide.html', '_blank')">Test 6</button>
+            <button class="nav-btn" onclick="window.open('https://jeje2025.github.io/toeicforjejetransfer6/', '_blank')">Test 6</button>
         </div>
 
         <div class="content">
@@ -913,90 +944,4 @@
                         <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
                             <p><strong>이메일 제안:</strong> "I also recommend renting a <span class="highlight">drink machine</span>"</p>
                             <p><strong>웹페이지 서비스 매칭:</strong></p>
-                            <p style="margin-left: 20px;">→ <strong>Service 4 (Traditional Vending)</strong>: carbonated beverages, juice, and water</p>
-                            <p style="margin-top: 10px;">💡 음료 자판기 = Traditional Vending 서비스</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tip-box">
-                    <h4>💡 Part 7 다중 지문 고득점 전략</h4>
-                    <p><strong>1. 지문 유형별 접근법:</strong><br>
-                    • 이중 지문: 공통 주제/인물 먼저 파악<br>
-                    • 삼중 지문: 각 지문의 역할 구분 (정보제공/요청/응답)</p>
-                    
-                    <p style="margin-top: 15px;"><strong>2. 연계 문제 정복:</strong><br>
-                    • 날짜, 인물명, 제품명을 형광펜으로 표시<br>
-                    • 정보를 시간순/논리순으로 재배열<br>
-                    • 숨겨진 정보는 여러 지문을 오가며 추론</p>
-                    
-                    <p style="margin-top: 15px;"><strong>3. 시간 관리:</strong><br>
-                    • 이중 지문: 2-3분<br>
-                    • 삼중 지문: 3-4분<br>
-                    • NOT 문제는 마지막에!</p>
-                </div>
-            </div>
-
-            <!-- LC Section (placeholder) -->
-            <div id="lc" class="section">
-                <h2 class="part-title">LC 전략</h2>
-                <p style="margin-bottom: 20px;">LC 내용이 준비되면 추가될 예정입니다.</p>
-                
-                <div class="card">
-                    <h3>곧 업데이트됩니다!</h3>
-                    <p>LC Part 1-4 전략이 곧 추가될 예정입니다.</p>
-                </div>
-            </div>
-
-            <!-- Vocabulary Section (placeholder) -->
-            <div id="vocab" class="section">
-                <h2 class="part-title">필수 어휘</h2>
-                <p style="margin-bottom: 20px;">Test 7 필수 어휘가 준비되면 추가될 예정입니다.</p>
-                
-                <div class="card">
-                    <h3>곧 업데이트됩니다!</h3>
-                    <p>Test 7 핵심 어휘와 표현이 곧 추가될 예정입니다.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer">
-            <p>💪 Test 7 유형별 학습으로 850+ 달성하자!</p>
-            <p style="margin-top: 10px; font-size: 12px;">© 제제편입</p>
-        </div>
-    </div>
-
-    <script>
-        function showSection(sectionId) {
-            // Hide all sections
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => {
-                section.classList.remove('active');
-            });
-
-            // Remove active class from all nav buttons
-            const navButtons = document.querySelectorAll('.nav-btn');
-            navButtons.forEach(button => {
-                button.classList.remove('active');
-            });
-
-            // Show selected section
-            document.getElementById(sectionId).classList.add('active');
-
-            // Add active class to clicked button
-            event.target.classList.add('active');
-        }
-
-        // Add touch feedback for mobile
-        document.querySelectorAll('.card, .vocab-item, .nav-btn').forEach(element => {
-            element.addEventListener('touchstart', function() {
-                this.style.transform = 'scale(0.98)';
-            });
-            
-            element.addEventListener('touchend', function() {
-                this.style.transform = '';
-            });
-        });
-    </script>
-</body>
-</html>
+                            <p style="margin-left: 20px;">→ <strong>Service
