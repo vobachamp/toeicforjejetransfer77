@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제제편입 토익 850+ 프로젝트 - Test 7</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(0.8); }
+            50% { transform: scale(1.2); }
+        }
+
+        .header h1 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .score-boost {
+            background: rgba(255,255,255,0.2);
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-top: 10px;
+            font-weight: bold;
+            backdrop-filter: blur(10px);
+        }
+
+        .navigation {
+            display: flex;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .nav-btn {
+            flex-shrink: 0;
+            padding: 15px 20px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: bold;
+            color: #666;
+            transition: all 0.3s;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .nav-btn.active {
+            color: #667eea;
+            background: white;
+        }
+
+        .nav-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: #667eea;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .section {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .part-title {
+            font-size: 18px;
+            color: #667eea;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .part-title::before {
+            content: '📝';
+            font-size: 24px;
+        }
+
+        .card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(102,126,234,0.2);
+        }
+
+        .card h3 {
+            color: #495057;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .formula {
+            background: #667eea;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 10px;
+            display: inline-block;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .example-list {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        .example-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #e9ecef;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .example-list li:last-child {
+            border-bottom: none;
+        }
+
+        .example-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .tip-box {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tip-box::before {
+            content: '✨';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 40px;
+            opacity: 0.3;
+        }
+
+        .tip-box h4 {
+            color: #2d3436;
+            margin-bottom: 10px;
+        }
+
+        .vocabulary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .vocab-item {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .vocab-item:hover {
+            border-color: #667eea;
+            transform: scale(1.05);
+        }
+
+        .vocab-item strong {
+            display: block;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .pattern-box {
+            background: #e8f4f8;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .pattern-box h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .signal-words {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .signal-word {
+            background: #667eea;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .question-nums {
+            display: inline-block;
+            background: rgba(102,126,234,0.1);
+            color: #667eea;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 20px;
+            }
+            
+            .nav-btn {
+                font-size: 12px;
+                padding: 12px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 [제제편입] 토익 850+ 프로젝트</h1>
+            <p>LC / RC 모의토익 7회차 (Test 7)</p>
+            <div class="score-boost">체계적인 유형별 학습으로 고득점 달성!</div>
+        </div>
+
+        <div class="navigation">
+            <button class="nav-btn active" onclick="showSection('rc5')">RC Part 5</button>
+            <button class="nav-btn" onclick="showSection('rc6')">RC Part 6</button>
+            <button class="nav-btn" onclick="showSection('rc7')">RC Part 7</button>
+            <button class="nav-btn" onclick="showSection('lc')">LC 전략</button>
+            <button class="nav-btn" onclick="showSection('vocab')">필수 어휘</button>
+            <button class="nav-btn" onclick="window.open('https://jeje2025.github.io/toeicforjejetransfer/toeic-study-guide.html', '_blank')">Test 6</button>
+        </div>
+
+        <div class="content">
+            <!-- RC Part 5 Section -->
+            <div id="rc5" class="section active">
+                <h2 class="part-title">RC Part 5. 유형별 완벽 정복</h2>
+                <p style="margin-bottom: 20px;">Test 7 전체 문제를 유형별로 분석한 결과, 5가지 핵심 패턴이 도출되었습니다. 각 유형의 출제 빈도와 핵심 전략을 완벽 마스터하세요!</p>
+
+                <div class="card">
+                    <h3>🥇 1위: 품사 구분 문제 <span class="question-nums">9문제 출제</span></h3>
+                    <p style="margin-bottom: 20px;">가장 많이 출제되는 유형! 빈칸 앞뒤 단어를 보고 문장 구조에 맞는 품사를 찾는 것이 핵심입니다.</p>
+                    
+                    <div class="pattern-box" style="margin-top: 20px;">
+                        <h4>📌 명사 자리 <span class="question-nums">Q.107, 117, 121, 125</span></h4>
+                        <p>명사가 와야 하는 자리를 정확히 파악하는 것이 중요합니다.</p>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #667eea; margin-bottom: 10px;">핵심 패턴</h5>
+                            <ul class="example-list">
+                                <li><strong>관사/소유격 + (형용사) + <span class="highlight">명사</span></strong><br>
+                                예: <code>a/an/the</code>, <code>its, my, Garcia's</code> 뒤</li>
+                                <li><strong>전치사 + <span class="highlight">명사</span></strong><br>
+                                예: <code>of, in, for</code>의 목적어 자리</li>
+                                <li><strong>주어 자리</strong> (문장 맨 앞)</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin-top: 10px;">
+                            <h5 style="color: #495057;">기출 예문 (121번)</h5>
+                            <p style="font-style: italic; margin: 10px 0;">Garcia's latest <span class="highlight">______</span> has resulted in profits increasing...</p>
+                            <p><strong>분석:</strong> 소유격 <code>Garcia's</code>와 형용사 <code>latest</code> 뒤에는 <strong>명사</strong>가 와야 합니다. 따라서 명사형이 정답!</p>
+                        </div>
+                    </div>
+
+                    <div class="pattern-box">
+                        <h4>📌 형용사 자리 <span class="question-nums">Q.103, 104, 129</span></h4>
+                        <p>명사를 수식하거나 보어 역할을 하는 형용사 자리를 찾아내세요.</p>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #667eea; margin-bottom: 10px;">핵심 패턴</h5>
+                            <ul class="example-list">
+                                <li><strong>be동사 + <span class="highlight">형용사</span></strong> (2형식 주격 보어)</li>
+                                <li><strong>(관사) + <span class="highlight">형용사</span> + 명사</strong> (명사 수식)</li>
+                                <li><strong>5형식 동사 + 목적어 + <span class="highlight">형용사</span></strong><br>
+                                예: <code>find, make, keep</code> + 목적어 + 형용사 (목적격 보어)</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin-top: 10px;">
+                            <h5 style="color: #495057;">기출 예문 (103번)</h5>
+                            <p style="font-style: italic; margin: 10px 0;">The presentation was <span class="highlight">______</span> and informative.</p>
+                            <p><strong>분석:</strong> <code>be동사(was)</code> 뒤에 <code>and</code>로 연결된 형용사 <code>informative</code>와 병렬 구조를 이루므로 <strong>형용사</strong>가 정답!</p>
+                        </div>
+                    </div>
+
+                    <div class="pattern-box">
+                        <h4>📌 부사 자리 <span class="question-nums">Q.119, 127</span></h4>
+                        <p>동사, 형용사, 다른 부사, 문장 전체를 수식하는 부사의 위치를 익히세요.</p>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #667eea; margin-bottom: 10px;">핵심 위치</h5>
+                            <ul class="example-list">
+                                <li><strong>동사 앞/뒤</strong>에서 동사 수식</li>
+                                <li><strong>be + <span class="highlight">부사</span> + p.p.</strong> 사이</li>
+                                <li><strong>조동사 + <span class="highlight">부사</span> + 동사원형</strong> 사이</li>
+                                <li>문장 맨 앞/뒤에서 문장 전체 수식</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>🥈 2위: 어휘 문제 <span class="question-nums">11문제 출제</span></h3>
+                    <p style="margin-bottom: 20px;">문법적으로는 모두 가능하지만, 문맥상 가장 자연스러운 의미의 단어를 고르는 유형입니다.</p>
+                    
+                    <div class="pattern-box">
+                        <h4>🔥 Test 7 필수 연어(Collocation) 표현</h4>
+                        <p>토익에서는 특정 단어들이 함께 쓰이는 조합(연어)을 자주 출제합니다.</p>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #667eea; margin-bottom: 10px;">출제된 핵심 표현</h5>
+                            <ul class="example-list">
+                                <li><code>check the <strong>status</strong></code> - 상태를 확인하다 <span class="question-nums">Q.108</span></li>
+                                <li><code>sales <strong>figures</strong></code> - 매출 수치 <span class="question-nums">Q.110</span></li>
+                                <li><code><strong>control</strong> temperature</code> - 온도를 제어하다 <span class="question-nums">Q.112</span></li>
+                                <li><code><strong>eagerly</strong> anticipate</code> - 열렬히 기대하다 <span class="question-nums">Q.114</span></li>
+                                <li><code><strong>extensive</strong> changes</code> - 광범위한 변화 <span class="question-nums">Q.116</span></li>
+                                <li><code><strong>refrain from</strong> ~ing</code> - ~하는 것을 삼가다 <span class="question-nums">Q.118</span></li>
+                                <li><code>in <strong>recognition</strong> of</code> - ~을 인정하여, ~의 공로로 <span class="question-nums">Q.120</span></li>
+                                <li><code><strong>exclusive</strong> access</code> - 독점적인 접근 권한 <span class="question-nums">Q.124</span></li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin-top: 10px;">
+                            <h5 style="color: #495057;">학습 팁</h5>
+                            <p>💡 단어를 암기할 때 단독으로 외우지 말고, <strong>예문과 함께 쓰이는 단어들의 조합</strong>을 통째로 외우세요. 토익은 자연스러운 영어 표현을 테스트합니다!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>🥉 3위: 접속사/전치사/접속부사 <span class="question-nums">6문제 출제</span></h3>
+                    <p style="margin-bottom: 20px;">문장과 문장(절), 또는 단어와 단어(구)를 연결하는 기능을 정확히 이해해야 합니다.</p>
+                    
+                    <div class="pattern-box">
+                        <h4>📌 접속사 vs 전치사 구분법 <span class="question-nums">Q.115</span></h4>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #667eea; margin-bottom: 10px;">황금 공식</h5>
+                            <p><strong>접속사</strong> + <span class="highlight">주어 + 동사 (절)</span><br>
+                            <strong>전치사</strong> + <span class="highlight">명사 (구)</span></p>
+                        </div>
+                        
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                            <h5 style="color: #495057;">자주 헷갈리는 쌍</h5>
+                            <ul class="example-list">
+                                <li><code>because</code> (접속사) vs <code>because of</code> (전치사)</li>
+                                <li><code>although</code> (접속사) vs <code>despite</code> (전치사)</li>
+                                <li><code>while</code> (접속사) vs <code>during</code> (전치사)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pattern-box">
+                        <h4>📌 의미별 주요 표현 <span class="question-nums">Q.106, 122, 126</span></h4>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #667eea; margin-bottom: 10px;">시간 관련</h5>
+                            <ul class="example-list">
+                                <li><code>until</code> - 행위/상태의 <strong>지속</strong> (~까지 계속)</li>
+                                <li><code>by</code> - 행위의 <strong>완료/마감</strong> (~까지는)</li>
+                                <li><code>within</code> - 특정 기간 <strong>이내에</strong></li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                            <h5 style="color: #495057;">조건/양보</h5>
+                            <ul class="example-list">
+                                <li><code>as long as</code> - ~하는 한 (조건)</li>
+                                <li><code>provided that</code> - ~라면 (조건)</li>
+                                <li><code>even though</code> - ~임에도 불구하고 (양보)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pattern-box">
+                        <h4>📌 상관접속사 <span class="question-nums">Q.102</span></h4>
+                        <p>짝을 이루는 표현은 통째로 암기해야 합니다!</p>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <ul class="example-list">
+                                <li><code>both A and B</code> - A와 B 둘 다</li>
+                                <li><code>either A or B</code> - A 또는 B 둘 중 하나</li>
+                                <li><code>neither A nor B</code> - A도 B도 아닌</li>
+                                <li><code>not only A but also B</code> - A뿐만 아니라 B도</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>🏅 4위: 동사 형태 문제 <span class="question-nums">3문제 출제</span></h3>
+                    <p style="margin-bottom: 20px;">준동사(to부정사, 동명사, 분사)와 명령문의 형태를 정확히 파악해야 합니다.</p>
+                    
+                    <div class="pattern-box">
+                        <h4>📌 to부정사 활용 <span class="question-nums">Q.105, 111</span></h4>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #667eea; margin-bottom: 10px;">목적을 나타내는 to부정사</h5>
+                            <p><strong>~하기 위해서</strong>라는 의미로 문장 뒤에 추가 설명</p>
+                            <p style="margin-top: 10px;"><em>예: I went to the store <strong>to buy</strong> some milk.</em></p>
+                        </div>
+                        
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                            <h5 style="color: #495057;">5형식 동사 + 목적어 + to부정사</h5>
+                            <p>특정 동사들은 목적어 뒤에 to부정사를 목적격 보어로 취합니다.</p>
+                            <ul class="example-list" style="margin-top: 10px;">
+                                <li><code>enable + O + to V</code> - O가 V하도록 가능하게 하다</li>
+                                <li><code>allow + O + to V</code> - O가 V하도록 허락하다</li>
+                                <li><code>require + O + to V</code> - O가 V하도록 요구하다</li>
+                                <li><code>advise + O + to V</code> - O에게 V하라고 조언하다</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pattern-box">
+                        <h4>📌 명령문 <span class="question-nums">Q.113</span></h4>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #667eea; margin-bottom: 10px;">핵심 규칙</h5>
+                            <p>주어 없이 <strong>동사원형</strong>으로 문장이 시작되면 명령문입니다!</p>
+                            <p style="margin-top: 10px;"><em>예: <strong>Please ensure</strong> all doors are locked. (O)<br>
+                            Please ensuring... (X)</em></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>🏅 5위: 대명사 문제 <span class="question-nums">2문제 출제</span></h3>
+                    <p style="margin-bottom: 20px;">명사를 대신 받는 대명사의 격과 수를 정확히 파악해야 합니다.</p>
+                    
+                    <div class="pattern-box">
+                        <h4>📌 소유격 대명사 <span class="question-nums">Q.101</span></h4>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #667eea; margin-bottom: 10px;">수 일치 체크</h5>
+                            <p>앞에 나온 명사의 수(단수/복수)와 일치해야 합니다.</p>
+                            <ul class="example-list" style="margin-top: 10px;">
+                                <li><code>Passengers</code> (복수) → <code>their</code> seats</li>
+                                <li><code>The company</code> (단수) → <code>its</code> policy</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pattern-box">
+                        <h4>📌 부정대명사 <span class="question-nums">Q.123</span></h4>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #667eea; margin-bottom: 10px;">중요 표현</h5>
+                            <p><code>Anyone who ~</code> - ~하는 사람은 누구든지</p>
+                            <p style="margin-top: 10px;">불특정 인물을 지칭할 때 자주 사용되는 필수 표현입니다!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tip-box">
+                    <h4>💡 Test 7 Part 5 학습 전략</h4>
+                    <p>1. <strong>품사 문제</strong>가 가장 많이 출제되므로 문장 구조 분석 능력을 기르세요<br>
+                    2. <strong>어휘 문제</strong>는 연어(collocation) 단위로 학습하면 효과적입니다<br>
+                    3. <strong>접속사/전치사</strong>는 뒤에 오는 구조(절 vs 구)로 구분하세요<br>
+                    4. 유형별로 정리한 이 자료를 반복 학습하면 정답률이 크게 향상됩니다!</p>
+                </div>
+            </div>
+
+            <!-- RC Part 6 Section -->
+            <div id="rc6" class="section">
+                <h2 class="part-title">RC Part 6. 문맥 파악</h2>
+                <p style="margin-bottom: 20px;">Part 6는 Part 5의 문법/어휘 지식과 Part 7의 독해 능력을 동시에 요구합니다. 특히 <strong>문맥의 흐름과 논리적 연결</strong>을 파악하는 능력이 핵심입니다!</p>
+
+                <div class="card">
+                    <h3>🥇 1위: 문장 고르기 문제 <span class="question-nums">4문제 출제</span></h3>
+                    <p style="margin-bottom: 20px;">Part 6의 핵심 유형! 빈칸 앞뒤 문장과의 논리적 연결 고리를 찾는 것이 관건입니다.</p>
+                    
+                    <div class="pattern-box" style="margin-top: 20px;">
+                        <h4>🔑 정답 찾는 3단계 전략</h4>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #667eea; margin-bottom: 10px;">Step 1: 앞 문장과의 연결</h5>
+                            <p>앞 문장의 특정 단어나 내용을 <strong>대명사</strong>(<code>it, they, this</code>) 또는 <strong>다른 표현</strong>으로 받아 설명하는지 확인</p>
+                        </div>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #667eea; margin-bottom: 10px;">Step 2: 뒷 문장과의 연결</h5>
+                            <p>빈칸에 들어갈 문장이 뒷 문장의 <strong>원인/근거</strong>가 되거나, 뒷 문장이 빈칸 문장의 <strong>결과/상세 설명</strong>이 되는지 확인</p>
+                        </div>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #667eea; margin-bottom: 10px;">Step 3: 오답 제거</h5>
+                            <p>전체 주제와는 관련 있으나, 빈칸 바로 앞뒤 문장과는 논리적 연결이 어색한 문장은 오답!</p>
+                        </div>
+                    </div>
+
+                    <div class="pattern-box">
+                        <h4>📝 Test 7 실전 예제 분석</h4>
+                        
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #495057;">Q.132 - 제안과 이유 연결</h5>
+                            <p style="margin: 10px 0;">앞 문장: 다른 직책 제안<br>
+                            빈칸: <span class="highlight">______</span><br>
+                            뒷 문장: 첨부 문서 참조 안내</p>
+                            <p><strong>정답 (D):</strong> 제안의 이유를 설명하며, <code>The attached document</code>로 자연스럽게 연결</p>
+                        </div>
+                        
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #495057;">Q.136 - 내용 부연 설명</h5>
+                            <p style="margin: 10px 0;">앞 문장: <code>great deals</code> (좋은 상품) 언급<br>
+                            빈칸: <span class="highlight">______</span><br>
+                            뒷 문장: 구체적인 할인 정보</p>
+                            <p><strong>정답 (A):</strong> 좋은 상품을 얻는 방법을 제시하며 자연스럽게 연결</p>
+                        </div>
+                        
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #495057;">Q.140 - 추가 정보 제공</h5>
+                            <p style="margin: 10px 0;">도로 통제 공지문에서 '영향받는 지역의 지도를 첨부했으니 참고하라'는 내용이 가장 적절</p>
+                            <p><strong>정답 (C):</strong> 실용적인 정보를 추가로 제공</p>
+                        </div>
+                        
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #495057;">Q.145 - 정보 나열 확장</h5>
+                            <p style="margin: 10px 0;">천문관의 특징을 나열하다가 단기 전시회 정보를 추가</p>
+                            <p><strong>정답 (D):</strong> 기존 정보에 새로운 정보를 더하는 자연스러운 흐름</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>🥈 2위: 어휘 문제 (문맥 파악) <span class="question-nums">6문제 출제</span></h3>
+                    <p style="margin-bottom: 20px;">단순 단어 뜻이 아닌, 지문 전체의 흐름에 맞는 단어를 선택해야 합니다.</p>
+                    
+                    <div class="pattern-box">
+                        <h4>📌 명사 어휘 <span class="question-nums">Q.133, 141, 143</span></h4>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #667eea; margin-bottom: 10px;">문맥별 적절한 명사 선택</h5>
+                            <ul class="example-list">
+                                <li><strong>Q.133:</strong> 물류 코디네이터 직책 → <code>application</code> (지원서)</li>
+                                <li><strong>Q.141:</strong> 도로 통제의 영향 → 주변 <code>business</code> (사업체)</li>
+                                <li><strong>Q.143:</strong> 박물관 단지 → 여러 <code>buildings</code> (건물들)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pattern-box">
+                        <h4>📌 부사 어휘 <span class="question-nums">Q.137</span></h4>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #667eea; margin-bottom: 10px;">추가 정보 연결</h5>
+                            <p>앞 문장의 내용에 추가적인 정보를 더할 때 → <code>also</code> (또한)</p>
+                            <p style="margin-top: 10px;">💡 <strong>Tip:</strong> 문장 중간에 위치하며 추가 정보를 자연스럽게 연결</p>
+                        </div>
+                    </div>
+
+                    <div class="pattern-box">
+                        <h4>📌 전치사/전치사구 <span class="question-nums">Q.138, 144</span></h4>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #667eea; margin-bottom: 10px;">필수 표현</h5>
+                            <ul class="example-list">
+                                <li><code>throughout the day</code> - 하루 종일 <span class="question-nums">Q.138</span></li>
+                                <li><code>In addition to + 명사</code> - ~에 더하여, ~뿐만 아니라 <span class="question-nums">Q.144</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>🥉 3위: 동사 형태 및 시제 문제 <span class="question-nums">3문제 출제</span></h3>
+                    <p style="margin-bottom: 20px;">문맥 속 시간 표현이 결정적 단서! 정확한 시제와 동사 형태를 선택하세요.</p>
+                    
+                    <div class="pattern-box">
+                        <h4>📌 시제 선택 <span class="question-nums">Q.135, 139</span></h4>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #667eea; margin-bottom: 10px;">시간 표현별 시제</h5>
+                            <ul class="example-list">
+                                <li><strong>Q.135:</strong> <code>on Saturday, 9 September</code><br>
+                                → 확정된 가까운 미래 일정은 <strong>현재진행형</strong> (<code>is hosting</code>)</li>
+                                <li><strong>Q.139:</strong> <code>Beginning on July 15</code><br>
+                                → 미래 시점 표현은 <strong>미래 시제</strong> (<code>will be</code>)</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+                            <h5 style="color: #495057;">💡 암기 팁</h5>
+                            <p>• 확정된 일정 + 가까운 미래 = 현재진행형<br>
+                            • Beginning/Starting + 미래 날짜 = will</p>
+                        </div>
+                    </div>
+
+                    <div class="pattern-box">
+                        <h4>📌 준동사 (to부정사) <span class="question-nums">Q.146</span></h4>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #667eea; margin-bottom: 10px;">기본 표현</h5>
+                            <p><code>be able to V</code> - ~할 수 있다</p>
+                            <p style="margin-top: 10px;">⚠️ <strong>주의:</strong> <code>able</code> 뒤에는 반드시 <strong>to부정사</strong>가 옵니다!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>🏅 4위: 접속부사 및 품사 문제 <span class="question-nums">2문제 출제</span></h3>
+                    <p style="margin-bottom: 20px;">문장의 논리적 관계와 문장 구조를 정확히 파악하세요.</p>
+                    
+                    <div class="pattern-box">
+                        <h4>📌 접속부사 <span class="question-nums">Q.131</span></h4>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #667eea; margin-bottom: 10px;">인과관계 표현</h5>
+                            <p>앞 문장: 원인<br>
+                            뒷 문장: 결과</p>
+                            <p style="margin-top: 10px;">→ <code>Consequently</code> (결과적으로) = <code>Therefore</code></p>
+                        </div>
+                    </div>
+
+                    <div class="pattern-box">
+                        <h4>📌 품사 (감정 형용사) <span class="question-nums">Q.134</span></h4>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <h5 style="color: #667eea; margin-bottom: 10px;">감정 형용사 구분</h5>
+                            <p><code>If you are ______</code> 구조에서 be동사 뒤 = 형용사</p>
+                            <ul class="example-list" style="margin-top: 10px;">
+                                <li>사람이 느끼는 감정 → <strong>p.p. 형태</strong> (<code>interested</code>, <code>excited</code>)</li>
+                                <li>감정을 유발하는 것 → <strong>-ing 형태</strong> (<code>interesting</code>, <code>exciting</code>)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tip-box">
+                    <h4>💡 Part 6 고득점 전략</h4>
+                    <p>1. <strong>문장 고르기:</strong> 빈칸 앞뒤 2-3문장을 반드시 함께 읽으세요<br>
+                    2. <strong>대명사/지시어:</strong> it, this, they가 무엇을 가리키는지 추적<br>
+                    3. <strong>시간 표현:</strong> 날짜, 시제 관련 단서를 놓치지 마세요<br>
+                    4. <strong>전체 흐름:</strong> 지문의 목적(이메일, 공지, 광고 등)을 먼저 파악<br>
+                    5. Part 6는 <strong>Part 5 + Part 7의 결합</strong>임을 항상 기억하세요!</p>
+                </div>
+            </div>
+
+            <!-- RC Part 7 Section -->
+            <div id="rc7" class="section">
+                <h2 class="part-title">RC Part 7. 독해 - 다중 지문 완벽 정복</h2>
+                <p style="margin-bottom: 20px;">Part 7 다중 지문은 <strong>여러 문서에 흩어져 있는 정보를 조합하여 정답을 찾는 '연계 문제'</strong>를 해결하는 것이 핵심입니다. Test 7의 실전 문제를 통해 완벽한 전략을 익혀보세요!</p>
+
+                <div class="card">
+                    <h3>🎯 Part 7 다중 지문 핵심 전략</h3>
+                    
+                    <div class="pattern-box">
+                        <h4>📌 성공의 3원칙</h4>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <ul class="example-list">
+                                <li><strong>연결고리 찾기:</strong> 인물명, 날짜, 회사명, 제품명 등 여러 지문에 공통으로 등장하는 요소를 먼저 파악</li>
+                                <li><strong>Paraphrasing 주의:</strong> 같은 내용이 다른 표현으로 나타나는 것을 놓치지 마세요</li>
+                                <li><strong>지문 간 이동:</strong> 한 지문에서 답을 못 찾으면 즉시 다른 지문으로 이동</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>📚 Q.176-180: 웹페이지 + 이메일 (이중 지문)</h3>
+                    <p style="margin-bottom: 15px; color: #666;">호텔 웹페이지의 일반 규정과 특정 고객의 불만/요청 이메일 연결</p>
+                    
+                    <div class="pattern-box">
+                        <h4>🔍 Q.176 - 세부 정보 찾기</h4>
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <p><strong>질문:</strong> 체크인 시 투숙객이 제공해야 하는 것은?</p>
+                            <p style="margin-top: 10px;"><strong>정답 근거 (웹페이지):</strong><br>
+                            <code>"Guests are required to present a passport or driver's license at the time of check-in."</code></p>
+                            <p style="margin-top: 10px;">💡 <strong>핵심:</strong> <code>passport or driver's license</code> → <code>Proof of identification</code> (Paraphrasing)</p>
+                        </div>
+                    </div>
+
+                    <div class="pattern-box">
+                        <h4>🔍 Q.177 - NOT 문제</h4>
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <p><strong>전략:</strong> 웹페이지에 언급된 서비스를 하나씩 소거</p>
+                            <ul class="example-list" style="margin-top: 10px;">
+                                <li>✓ coffeemaker (핫음료)</li>
+                                <li>✓ airport shuttle service (공항 셔틀)</li>
+                                <li>✓ swimming pool (수영장)</li>
+                                <li>✗ <strong>A light breakfast (가벼운 아침 식사) - 언급 없음!</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pattern-box" style="background: #fff3cd;">
+                        <h4>⭐ Q.179 - 연계 문제 (고난도)</h4>
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <p><strong>질문:</strong> Mr. Ramon에게 요금이 부과된 가장 유력한 이유는?</p>
+                            
+                            <div style="margin-top: 15px; padding: 10px; background: #f8f9fa; border-radius: 8px;">
+                                <p><strong>Step 1:</strong> 이메일 정보<br>
+                                → Mr. Ramon이 4월 17일에 6월 예약을 변경</p>
+                                
+                                <p style="margin-top: 10px;"><strong>Step 2:</strong> 웹페이지 규정<br>
+                                → "도착 24시간 이전에 변경해야 환불 가능"</p>
+                                
+                                <p style="margin-top: 10px;"><strong>Step 3:</strong> 추론<br>
+                                → 규정대로 했는데 요금이 부과됨 = <strong>시스템 착오</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>📚 Q.181-185: 이메일 + 웹페이지 (이중 지문)</h3>
+                    <p style="margin-bottom: 15px; color: #666;">사무실 인테리어 요청 이메일과 아트 컨설팅 회사 서비스 연결</p>
+                    
+                    <div class="pattern-box">
+                        <h4>🔍 Q.181 - 추론 문제</h4>
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <p><strong>근거:</strong> "artwork for the main open-plan office area on the <span class="highlight">third floor</span>"</p>
+                            <p style="margin-top: 10px;">💡 <strong>추론:</strong> 3층이 있다 = 건물이 <strong>more than one floor</strong> (1층 이상)</p>
+                        </div>
+                    </div>
+
+                    <div class="pattern-box" style="background: #fff3cd;">
+                        <h4>⭐ Q.184 - 연계 문제</h4>
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <p><strong>이메일 요구사항:</strong> 새 사무실에 아트워크를 <strong>'배치(layout)'</strong></p>
+                            <p><strong>웹페이지 매칭:</strong> <strong>Align 서비스</strong> - "clients looking to incorporate artwork into a <span class="highlight">new office</span>"</p>
+                            <p style="margin-top: 10px;">✅ 요구사항과 서비스 설명이 완벽 일치!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>📚 Q.191-195: 광고 + 웹페이지 + 리뷰 (삼중 지문)</h3>
+                    <p style="margin-bottom: 15px; color: #666;">안경점의 구인 광고, 매장 정보, 고객 리뷰를 종합 분석</p>
+                    
+                    <div class="pattern-box">
+                        <h4>🔍 Q.192 - NOT 문제</h4>
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <p><strong>웹페이지 스캔 결과:</strong></p>
+                            <ul class="example-list">
+                                <li>✓ 영업시간 (Saturday)</li>
+                                <li>✓ 위치 (upper level of the Danvers Mall)</li>
+                                <li>✓ 안과 검진 (annual eye exam)</li>
+                                <li>✗ <strong>스포츠 안경 (sports eyeglasses) - 언급 없음!</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pattern-box" style="background: #fff3cd;">
+                        <h4>⭐ Q.193 - 연계 문제 (3개 지문 활용)</h4>
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <p><strong>정보 조합:</strong></p>
+                            <ol style="margin-left: 20px; margin-top: 10px;">
+                                <li><strong>리뷰:</strong> Ms. Palmer가 8월 31일 첫 근무</li>
+                                <li><strong>광고:</strong> 채용 담당자는 Tanisha Mosley</li>
+                                <li><strong>추론:</strong> 신입사원 Palmer는 <strong>Ms. Mosley와 함께 일한다</strong></li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="pattern-box" style="background: #e8f4f8;">
+                        <h4>🎁 Q.195 - 숨겨진 연계 (고난도)</h4>
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <p><strong>리뷰:</strong> "I bought two pairs!" (두 개를 샀습니다!)</p>
+                            <p><strong>웹페이지:</strong> "During the month of <span class="highlight">August</span>, enjoy 50% off the second pair"</p>
+                            <p><strong>리뷰 날짜:</strong> <span class="highlight">8월 31일</span></p>
+                            <p style="margin-top: 10px;">💡 <strong>결론:</strong> Mr. Drake는 8월 프로모션으로 <strong>할인을 받았다!</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>📚 Q.196-200: 웹페이지 + 이메일 2개 (삼중 지문)</h3>
+                    <p style="margin-bottom: 15px; color: #666;">자판기 서비스 회사의 웹페이지와 고객 문의/답변 이메일 연결</p>
+                    
+                    <div class="pattern-box">
+                        <h4>🔍 Q.196 - Paraphrasing 파악</h4>
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <p><strong>웹페이지:</strong> "electronic payments"</p>
+                            <p><strong>정답 선택지:</strong> "allows users to pay electronically"</p>
+                            <p style="margin-top: 10px;">💡 같은 의미, 다른 표현!</p>
+                        </div>
+                    </div>
+
+                    <div class="pattern-box">
+                        <h4>🔍 Q.199 - 이메일 간 정보 추적</h4>
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <div style="padding: 10px; background: #f8f9fa; border-radius: 8px;">
+                                <p><strong>첫 번째 이메일 (고객):</strong><br>
+                                "Could you please send me a <span class="highlight">list of the snacks</span>?"</p>
+                                
+                                <p style="margin-top: 10px;"><strong>두 번째 이메일 (답장):</strong><br>
+                                "I have attached <span class="highlight">the list you requested</span>."</p>
+                            </div>
+                            <p style="margin-top: 10px;">✅ 요청한 것 = 첨부한 것 = <strong>스낵 목록</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="pattern-box" style="background: #fff3cd;">
+                        <h4>⭐ Q.200 - 서비스 매칭 (연계)</h4>
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <p><strong>이메일 제안:</strong> "I also recommend renting a <span class="highlight">drink machine</span>"</p>
+                            <p><strong>웹페이지 서비스 매칭:</strong></p>
+                            <p style="margin-left: 20px;">→ <strong>Service 4 (Traditional Vending)</strong>: carbonated beverages, juice, and water</p>
+                            <p style="margin-top: 10px;">💡 음료 자판기 = Traditional Vending 서비스</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tip-box">
+                    <h4>💡 Part 7 다중 지문 고득점 전략</h4>
+                    <p><strong>1. 지문 유형별 접근법:</strong><br>
+                    • 이중 지문: 공통 주제/인물 먼저 파악<br>
+                    • 삼중 지문: 각 지문의 역할 구분 (정보제공/요청/응답)</p>
+                    
+                    <p style="margin-top: 15px;"><strong>2. 연계 문제 정복:</strong><br>
+                    • 날짜, 인물명, 제품명을 형광펜으로 표시<br>
+                    • 정보를 시간순/논리순으로 재배열<br>
+                    • 숨겨진 정보는 여러 지문을 오가며 추론</p>
+                    
+                    <p style="margin-top: 15px;"><strong>3. 시간 관리:</strong><br>
+                    • 이중 지문: 2-3분<br>
+                    • 삼중 지문: 3-4분<br>
+                    • NOT 문제는 마지막에!</p>
+                </div>
+            </div>
+
+            <!-- LC Section (placeholder) -->
+            <div id="lc" class="section">
+                <h2 class="part-title">LC 전략</h2>
+                <p style="margin-bottom: 20px;">LC 내용이 준비되면 추가될 예정입니다.</p>
+                
+                <div class="card">
+                    <h3>곧 업데이트됩니다!</h3>
+                    <p>LC Part 1-4 전략이 곧 추가될 예정입니다.</p>
+                </div>
+            </div>
+
+            <!-- Vocabulary Section (placeholder) -->
+            <div id="vocab" class="section">
+                <h2 class="part-title">필수 어휘</h2>
+                <p style="margin-bottom: 20px;">Test 7 필수 어휘가 준비되면 추가될 예정입니다.</p>
+                
+                <div class="card">
+                    <h3>곧 업데이트됩니다!</h3>
+                    <p>Test 7 핵심 어휘와 표현이 곧 추가될 예정입니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>💪 Test 7 유형별 학습으로 850+ 달성하자!</p>
+            <p style="margin-top: 10px; font-size: 12px;">© 제제편입</p>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Remove active class from all nav buttons
+            const navButtons = document.querySelectorAll('.nav-btn');
+            navButtons.forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+
+        // Add touch feedback for mobile
+        document.querySelectorAll('.card, .vocab-item, .nav-btn').forEach(element => {
+            element.addEventListener('touchstart', function() {
+                this.style.transform = 'scale(0.98)';
+            });
+            
+            element.addEventListener('touchend', function() {
+                this.style.transform = '';
+            });
+        });
+    </script>
+</body>
+</html>
